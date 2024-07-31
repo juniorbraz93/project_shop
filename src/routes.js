@@ -4,6 +4,7 @@ const router = express.Router()
 // const NOME_DO_CONTROLLER = require('./app/controllers/NOME_DO_CONTROLLER')
 
 // const authMiddleware = require('./app/middlewares/auth')
+// const authManegerMiddleware = require('./app/middlewares/authManeger')
 
 // router.get('/', function (req, res) {
 //     res.status(200).send('Server on')
