@@ -9,7 +9,7 @@
 
 ## 🤔 Sobre
 
-Projeto **Projeto de Backend de Loja**, projeto feito com base nos conceitos para o meu portifolio.
+Projeto **Projeto de Backend de Loja**, projeto feito com base nos conceitos para o banckend de uma loja.
 
 ---
 
