@@ -54,10 +54,10 @@ O projeto foi feito utilizando das seguintes tecnologias
 <!-- ❌ (Falta se feito) -->
 <!-- 🚧 (Em construção) -->
 
-- 🏠 Cadastro de admins ❌ (Falta se feito)
-- 🏠 Visualização de admins ❌ (Falta se feito)
-- 🏠 Login de admins ❌ (Falta se feito)
-- 🏠 Atualização de admins ❌ (Falta se feito)
+- 🏠 Cadastro de admins ✅ (Finalizado)
+- 🏠 Visualização de admins ✅ (Finalizado)
+- 🏠 Login de admins ✅ (Finalizado)
+- 🏠 Atualização de admins ✅ (Finalizado)
 - 🏠 Cadastro de gerentes ❌ (Falta se feito)
 - 🏠 Visualização de gerentes ❌ (Falta se feito)
 - 🏠 Login de gerentes ❌ (Falta se feito)
