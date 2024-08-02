@@ -1,9 +1,16 @@
 const express = require('express')
 
 const router = express.Router()
-// const NOME_DO_CONTROLLER = require('./app/controllers/NOME_DO_CONTROLLER')
+const AdminController = require('./app/controllers/AdminController')
 
-// const authMiddleware = require('./app/middlewares/auth')
+
+const authMiddleware = require('./app/middlewares/auth')
+
+router.post('/cadastro', AdminController.store)
+router.post('/login', AdminController.login)
+
+
+
 // const authManegerMiddleware = require('./app/middlewares/authManeger')
 
 // router.get('/', function (req, res) {
@@ -14,9 +21,14 @@ const router = express.Router()
 // IRAM PRECISAR DE AUTENTICAÇÃO ENTÃO ATENÇÃO SE A ROTA IRA PRECISAR
 // DE AUTENTICAÇÃO
 
-// router.use(authMiddleware)
+router.use(authMiddleware)
 
-// router.get('/NOME_DA_ROTA', NOME_DO_CONTROLLER.NOME_DO_METODO/FUNÇÂO)
+
+router.put('/admins', AdminController.update)
+router.get('/admins', AdminController.show)
+
+
+// router.get('/NOME_DA_ROTA', AdminController.NOME_DO_METODO/FUNÇÂO)
 
 
 
