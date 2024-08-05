@@ -2,15 +2,19 @@ const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcryptjs')
 
 
-class Admin extends Model {
+class Manager extends Model {
     static init(sequelize) {
         return super.init({
+
           name: DataTypes.STRING,
           email: DataTypes.STRING,
-          password: DataTypes.STRING 
+          password: DataTypes.STRING,
+          document: DataTypes.STRING,
+          address: DataTypes.STRING
+
         }, {
             sequelize,
-            tableName: 'admins',
+            tableName: 'managers',
             hooks: {
                 beforeCreate: async (admin) => {
                     const salt = await bcrypt.genSalt();
@@ -20,11 +24,11 @@ class Admin extends Model {
         });
     }
     static associate(models) {
-            // this.belongsTo(models.Admin_O_MESMO_DA_TABELA, { foreignKey: 'CHAVE_ESTRAGEIRA', as: 'NOME_DA_TABELA' });
-            this.hasMany(models.Manager, { foreignKey: 'admin_id', as: 'managers' });
+            this.belongsTo(models.Admin, { foreignKey: 'admin_id', as: 'admins' });
+            // this.hasMany(models.Manager_O_MESMO_DA_TABELA, { foreignKey: 'CHAVE_ESTRAGEIRA', as: 'managers' });
             // // RELACIONAMENTO DE MUITOS PRA MUITOS
-            // this.belongsToMany(models.Admin_O_MESMO_DA_TABELA, { foreignKey: 'CHAVE_ESTRAGEIRA', through: 'NOME_DA_TABELA_DE_RELACINAMENTO', as: 'NOME_DA_TABELA' });
+            // this.belongsToMany(models.NOME_DO_MODEL_O_MESMO_DA_TABELA, { foreignKey: 'CHAVE_ESTRAGEIRA', through: 'managers_DE_RELACINAMENTO', as: 'NOME_DA_TABELA' });
         }
 }
 
-module.exports = Admin;
+module.exports = Manager;
