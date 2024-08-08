@@ -2,6 +2,8 @@ const express = require('express')
 
 const router = express.Router()
 const AdminController = require('./app/controllers/AdminController')
+const ShopController = require('./app/controllers/ShopController')
+
 
 
 const authMiddleware = require('./app/middlewares/auth')
@@ -31,6 +33,10 @@ router.get('/admins',authMiddleware, AdminController.show)
 router.post('/cadastro_manager',authMiddleware, ManagerController.store)
 router.get('/manager',authManegerMiddleware, ManagerController.show)
 router.put('/manager',authManegerMiddleware, ManagerController.update)
+router.post('/cadastro_shop',authManegerMiddleware, ShopController.store)
+router.get('/listagem_shop',authManegerMiddleware, ShopController.index)
+router.put('/update_shop/:id',authManegerMiddleware, ShopController.update)
+router.get('/shops/:id',authManegerMiddleware, ShopController.show)
 
 
 
