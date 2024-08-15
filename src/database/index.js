@@ -8,6 +8,7 @@ const connection = new Sequelize(dbConfig);
 const Admin = require('../app/models/Admin.js');
 const Manager = require('../app/models/Manager.js');
 const Shop = require('../app/models/Shop.js');
+const Employee = require('../app/models/Employee.js');
 
 
 // Inicializa os modelos
@@ -15,12 +16,14 @@ const Shop = require('../app/models/Shop.js');
 Admin.init(connection);
 Manager.init(connection);
 Shop.init(connection);
+Employee.init(connection);
 
 
 // Setup associations
 Admin.associate(connection.models);
 Manager.associate(connection.models);
 Shop.associate(connection.models);
+Employee.associate(connection.models);
 
 
 // try {

@@ -25,7 +25,7 @@ class Manager extends Model {
     }
     static associate(models) {
             this.belongsTo(models.Admin, { foreignKey: 'admin_id', as: 'admins' });
-            // this.hasMany(models.Manager_O_MESMO_DA_TABELA, { foreignKey: 'CHAVE_ESTRAGEIRA', as: 'managers' });
+            this.hasMany(models.Employee, { foreignKey: 'manager_id', as: 'employees' });
             // // RELACIONAMENTO DE MUITOS PRA MUITOS
             // this.belongsToMany(models.NOME_DO_MODEL_O_MESMO_DA_TABELA, { foreignKey: 'CHAVE_ESTRAGEIRA', through: 'managers_DE_RELACINAMENTO', as: 'NOME_DA_TABELA' });
         }
