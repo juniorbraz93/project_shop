@@ -3,6 +3,7 @@ const express = require('express')
 const router = express.Router()
 const AdminController = require('./app/controllers/AdminController')
 const ShopController = require('./app/controllers/ShopController')
+const ProductController = require('./app/controllers/ProductController')
 
 
 
@@ -46,6 +47,13 @@ router.get('/listagem_employee',authManegerMiddleware, EmployeeController.index)
 router.get('/employees/:id',authManegerMiddleware, EmployeeController.show)
 router.put('/update_employee/:id',authManegerMiddleware, EmployeeController.update)
 router.delete('/delete_employee/:id',authManegerMiddleware, EmployeeController.delete)
+
+router.post('/cadastro_product/:shop_id',authManegerMiddleware, ProductController.store)
+router.get('/listagem_product',authManegerMiddleware, ProductController.index)
+router.get('/products/:id',authManegerMiddleware, ProductController.show)
+router.put('/update_product/:id',authManegerMiddleware, ProductController.update)
+router.delete('/delete_product/:id',authManegerMiddleware, ProductController.delete)
+
 
 
 

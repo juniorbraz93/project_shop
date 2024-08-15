@@ -9,6 +9,7 @@ const Admin = require('../app/models/Admin.js');
 const Manager = require('../app/models/Manager.js');
 const Shop = require('../app/models/Shop.js');
 const Employee = require('../app/models/Employee.js');
+const Product = require('../app/models/Product.js');
 
 
 // Inicializa os modelos
@@ -17,6 +18,7 @@ Admin.init(connection);
 Manager.init(connection);
 Shop.init(connection);
 Employee.init(connection);
+Product.init(connection);
 
 
 // Setup associations
@@ -24,6 +26,7 @@ Admin.associate(connection.models);
 Manager.associate(connection.models);
 Shop.associate(connection.models);
 Employee.associate(connection.models);
+Product.associate(connection.models);
 
 
 // try {
