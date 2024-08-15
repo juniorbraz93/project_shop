@@ -31,9 +31,11 @@ const EmployeeController = require('./app/controllers/EmployeeController')
 
 router.put('/admins',authMiddleware, AdminController.update)
 router.get('/admins',authMiddleware, AdminController.show)
+
 router.post('/cadastro_manager',authMiddleware, ManagerController.store)
 router.get('/manager',authManegerMiddleware, ManagerController.show)
 router.put('/manager',authManegerMiddleware, ManagerController.update)
+
 router.post('/cadastro_shop',authManegerMiddleware, ShopController.store)
 router.get('/listagem_shop',authManegerMiddleware, ShopController.index)
 router.put('/update_shop/:id',authManegerMiddleware, ShopController.update)
@@ -41,7 +43,7 @@ router.get('/shops/:id',authManegerMiddleware, ShopController.show)
 
 router.post('/cadastro_employee/:manager_id',authManegerMiddleware, EmployeeController.store)
 router.get('/listagem_employee',authManegerMiddleware, EmployeeController.index)
-// router.get('/employees/:id',authManegerMiddleware, EmployeeController.show)
+router.get('/employees/:id',authManegerMiddleware, EmployeeController.show)
 router.put('/update_employee/:id',authManegerMiddleware, EmployeeController.update)
 router.delete('/delete_employee/:id',authManegerMiddleware, EmployeeController.delete)
 

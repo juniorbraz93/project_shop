@@ -45,7 +45,23 @@ class EmployeeController {
     }
 
     async show(req, res) {
-        
+        const { id } = req.params
+        try {
+            const employee = await Employee.findOne({
+                where: {id : id }
+            })
+            if (!employee) {
+                return res.status(400).send({ 
+                    message: 'Nenhum Funcionário encontrado! '
+                })
+            }
+            return res.status(200).send({ data: employee})
+        } catch (error) {
+            return res.status(500).send({
+                message: 'Erro ao realizar cadastro de Funcionário!',
+                error: error.message
+            });
+        }
     }
 
     async update(req, res) {
