@@ -4,6 +4,7 @@ const router = express.Router()
 const AdminController = require('./app/controllers/AdminController')
 const ShopController = require('./app/controllers/ShopController')
 const ProductController = require('./app/controllers/ProductController')
+const ClientController = require('./app/controllers/ClientController')
 
 
 
@@ -54,7 +55,11 @@ router.get('/products/:id',authManegerMiddleware, ProductController.show)
 router.put('/update_product/:id',authManegerMiddleware, ProductController.update)
 router.delete('/delete_product/:id',authManegerMiddleware, ProductController.delete)
 
-
+router.post('/cadastro_client/:shops_id',authManegerMiddleware, ClientController.store)
+router.get('/listagem_client',authManegerMiddleware, ClientController.index)
+router.get('/clients/:id',authManegerMiddleware, ClientController.show)
+router.put('/update_client/:id',authManegerMiddleware, ClientController.update)
+router.delete('/delete_client/:id',authManegerMiddleware, ClientController.delete)
 
 
 // router.get('/NOME_DA_ROTA', AdminController.NOME_DO_METODO/FUNÇÂO)
