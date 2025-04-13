@@ -77,4 +77,4 @@ O projeto foi feito utilizando das seguintes tecnologias
 - 🏠 Atualização de produtos ❌ (Falta se feito)
 - 🏠 Delete de produtos ❌ (Falta se feito)
 
-Desenvolvido por [Junior Braz🧑‍💻](https://github.com/juniorbraz93) & [Brenda Mendes 👩‍💻](https://github.com/brxndas) & [Kayla Correia 👩‍💻](https://github.com/Kayzdxx)
+Desenvolvido por [Junior Braz🧑‍💻](https://github.com/juniorbraz93) & [Brenda Mendes 👩‍💻](https://github.com/brxndas)
